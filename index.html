@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+  <h1>Smart City Information Portal</h1>
+  <nav>
+    <a href="#home">Home</a> |
+    <a href="#initiatives">Initiatives</a> |
+    <a href="#services">Public Services</a> |
+    <a href="#transport">Transportation</a> |
+    <a href="#sustainability">Sustainable Development</a> |
+    <a href="#contact">Contact</a>
+  </nav>
+  <hr>
+</header>
+
+<main>
+
+  <!-- WELCOME  -->
+<section id="home">
+  <h2>Welcome</h2>
+  <p>A smart city uses technology, data and community participation to make urban life safer, cleaner and more efficient. This website provides information about smart city initiatives, public services, transportation and sustainable urban development.</p>
+</section>
+
+<hr>
+
+<!-- SMART CITY INITIATIVES CODE -->
+<section id="initiatives">
+  <h2>Smart City Initiatives</h2>
+  <ul>
+    <li><strong>Integrated Command Centre:</strong> One control room for traffic, emergency, utility and surveillance data.</li>
+    <li><strong>Smart Street Lighting:</strong> Adaptive LED lights that save energy.</li>
+    <li><strong>Public Wi-Fi Zones:</strong> Free internet in parks, bus stations and markets.</li>
+    <li><strong>Smart Infrastructure:</strong> GIS mapping and digital planning for roads, drainage and housing.</li>
+  </ul>
+</section>
+
+<hr>
+
+<!-- PUBLIC SERVUCES -->
+<section id="services">
+  <h2>Public Services</h2>
+  <table  cellpadding="6">
+    <thead>
+      <tr>
+        <th>Service</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Online Bill Payment</td><td>Pay water, electricity and property tax online.</td></tr>
+      <tr><td>Healthcare Access</td><td>Book appointments, find clinics, use telemedicine.</td></tr>
+      <tr><td>Smart Education</td><td>Digital classrooms, e-libraries and skill centres.</td></tr>
+      <tr><td>Waste Collection Tracking</td><td>Track garbage vehicles and schedule pick-ups.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<hr>
+
+<!-- SMART TRANSPORTATION CODE -->
+<section id="transport">
+  <h2>Smart Transportation</h2>
+
+  <h3>Integrated Public Transit</h3>
+  <ul>
+    <li>Real-time bus and metro tracking</li>
+    <li>One smart card for all public transport</li>
+    <li>Dedicated bus lanes</li>
+  </ul>
+
+  <h3>Intelligent Traffic Management</h3>
+  <ul>
+    <li>Adaptive traffic signals</li>
+    <li>Automated traffic violation detection</li>
+    <li>Smart parking with live slot availability</li>
+  </ul>
+
+  <h3>Electric Mobility</h3>
+  <ul>
+    <li>Public EV charging stations</li>
+    <li>Electric buses replacing diesel fleets</li>
+    <li>Battery-swapping hubs for e-rickshaws</li>
+  </ul>
+
+</section>
+
+<hr>
+
+<section id="sustainability">
+  <h2>Sustainable Urban Development</h2>
+  <ul>
+    <li><strong>Solar Rooftops:</strong> Clean power from municipal buildings and housing societies.</li>
+    <li><strong>Waste Management:</strong> Segregation, recycling and waste-to-energy plants.</li>
+    <li><strong>Water Recycling:</strong> Treated wastewater reused for gardens and industry.</li>
+    <li><strong>Green Spaces:</strong> More parks, tree cover and urban forests.</li>
+  </ul>
+
+  <h3>Development Roadmap</h3>
+  <ol>
+    <li>Phase 1 - Foundation: fibre network, command centre, sensors, digital portal.</li>
+    <li>Phase 2 - Mobility: smart signals, e-buses, charging network, transit card.</li>
+    <li>Phase 3 - Sustainability: solar expansion, waste-to-energy, water recycling.</li>
+    <li>Phase 4 - Citizen Experience: AI helpdesk, personalised services, open data.</li>
+  </ol>
+</section>
+
+<hr>
+
+<section id="contact">
+  <h2>Citizen Feedback</h2>
+  <form id="myForm">
+    <p>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name">
+    </p>
+    <p>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email">
+    </p>
+    <p>
+      <label for="topic">Topic:</label><br>
+      <select id="topic" name="topic">
+        <option>Public Services</option>
+        <option>Transportation</option>
+        <option>Waste and Sanitation</option>
+        <option>Energy and Environment</option>
+        <option>Other</option>
+      </select>
+    </p>
+    <p>
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="4" cols="40"></textarea>
+    </p>
+    <p><button type="submit">Submit</button></p>
+  </form>
+
+  <h3 id="result"></h3>
+</section>
+
+</main>
+
+<hr>
+<footer>
+  <p>Smart City Information Portal | Helpline: 1800-000-000 | info@smartcity.example</p>
+</footer> 
+
+<script>
+
+        // first line fetches data and stores it in constant form
+        const form = document.getElementById("myForm");
+
+        form.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let topic = document.getElementById("topic").value;
+
+            var message = "Registration Successful";
+            
+            // this line prints in given id tag eg result is in h3 tag
+            document.getElementById("result").innerHTML =
+                message + "<br>" +
+                "My name is " + name  + "<br>" +
+                " My email id is " + email + "<br>"  + " My topic is " +
+                 topic;
+        });
+
+    </script>
+
+</body>
+</html>
